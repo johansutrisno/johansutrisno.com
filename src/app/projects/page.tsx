@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/projects';
-import { Badge, Tag } from '@/components/Badge';
-import { ExternalLink, Github, Layers } from 'lucide-react';
+import { ProjectCard } from '@/components/ProjectCard';
+import { Badge } from '@/components/Badge';
 
 export default function Projects() {
   return (
@@ -22,66 +22,13 @@ export default function Projects() {
             </p>
           </div>
           <div className="flex gap-4">
-             <Badge variant="glass">5 Featured Projects</Badge>
+             <Badge variant="glass">{projects.length} Featured Projects</Badge>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {projects.map((project, index) => (
-            <motion.div
-              key={project.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative flex flex-col bg-surface border border-border rounded-3xl overflow-hidden hover:border-accent/40 transition-all duration-300"
-            >
-              {/* Project Image Placeholder / Decorative background */}
-              <div className="h-48 bg-surface-2 relative overflow-hidden flex items-center justify-center border-b border-border">
-                <div className="absolute inset-0 opacity-10 dot-grid group-hover:opacity-20 transition-opacity" />
-                <div className="relative z-10 flex flex-col items-center gap-2">
-                   <Layers size={40} className="text-accent/40 group-hover:text-accent transition-colors duration-500" />
-                   <span className="text-[10px] font-mono tracking-widest text-muted uppercase">Mobile Product</span>
-                </div>
-                
-                {/* Hover overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-40 transition-opacity" />
-              </div>
-
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map(tag => (
-                    <Tag key={tag}>{tag}</Tag>
-                  ))}
-                </div>
-                
-                <h2 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
-                  {project.title}
-                </h2>
-                
-                <p className="text-muted text-sm leading-relaxed mb-8 flex-grow">
-                  {project.description}
-                </p>
-
-                <div className="flex items-center gap-6 mt-auto">
-                   {project.github && (
-                     <a href={project.github} className="text-muted hover:text-foreground transition-colors flex items-center gap-1.5 text-sm font-medium">
-                        <Github size={18} /> Source
-                     </a>
-                   )}
-                   {project.link && (
-                     <a href={project.link} className="text-muted hover:text-foreground transition-colors flex items-center gap-1.5 text-sm font-medium">
-                        <ExternalLink size={18} /> Live Demo
-                     </a>
-                   )}
-                   {!project.github && !project.link && project.featured && (
-                     <span className="text-xs font-bold text-accent-light bg-accent-dim px-3 py-1 rounded-full flex items-center gap-1.5">
-                        <Sparkles size={12} /> Case Study Coming Soon
-                     </span>
-                   )}
-                </div>
-              </div>
-            </motion.div>
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
 
@@ -103,6 +50,3 @@ export default function Projects() {
     </div>
   );
 }
-
-// Sparkles icon for the case study badge
-import { Sparkles } from 'lucide-react';
