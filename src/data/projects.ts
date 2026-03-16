@@ -16,7 +16,7 @@ export interface Project {
 	tags: string[];
 	links: ProjectLinks;
 	status: "Live" | "Open Source" | "Completed";
-	type?: "Mobile App" | "Web App" | "Open Source" | "AI Platform";
+	type?: ("Mobile App" | "Web App" | "Open Source" | "AI Platform")[];
 	metrics?: { label: string; value: string }[];
 	featured?: boolean;
 }
@@ -35,7 +35,15 @@ export const projects: Project[] = [
 			"Rebuilt the entire app architecture in Flutter, improving performance and maintainability significantly",
 			"Maintained and grew a 20K+ DAU base through a seamless transition with zero service disruption",
 		],
-		tags: ["Flutter", "Architecture", "Team Lead", "Migration", "E-commerce"],
+		tags: [
+			"Flutter",
+			"Architecture",
+			"Team Lead",
+			"Migration",
+			"E-commerce",
+			"Android",
+			"iOS",
+		],
 		links: {
 			googlePlay:
 				"https://play.google.com/store/apps/details?id=com.kickavenue.androidshop&hl=id",
@@ -43,7 +51,7 @@ export const projects: Project[] = [
 				"https://apps.apple.com/id/app/kick-avenue-shop-hype-here/id1478394222",
 		},
 		status: "Live",
-		type: "Mobile App",
+		type: ["Mobile App"],
 		metrics: [
 			{ label: "DAU", value: "20K+" },
 			{ label: "Delivery", value: "17% Early" },
@@ -64,12 +72,21 @@ export const projects: Project[] = [
 			"Designed and implemented a bespoke cinematic animation system, delivering a premium user experience",
 			"Owned the full frontend across Flutter mobile and web from architecture to pixel-perfect delivery",
 		],
-		tags: ["Flutter", "AI", "Web", "Animation", "Healthcare"],
+		tags: [
+			"Flutter",
+			"React",
+			"AI",
+			"Animation",
+			"Voice Over",
+			"Healthcare",
+			"Web",
+			"Android",
+		],
 		links: {
 			website: "https://skinplusclinic.com/id/",
 		},
 		status: "Live",
-		type: "AI Platform",
+		type: ["Mobile App", "Web App", "AI Platform"],
 		featured: true,
 	},
 	{
@@ -85,7 +102,7 @@ export const projects: Project[] = [
 			"Rebuilt the subscription system UI to streamline upgrade paths and improve conversion rates",
 			"Overhauled the authentication flow for a smoother onboarding experience",
 		],
-		tags: ["Flutter", "AI", "UX", "Subscription", "Auth"],
+		tags: ["Flutter", "AI", "UX", "Subscription", "Auth", "Android", "iOS"],
 		links: {
 			googlePlay:
 				"https://play.google.com/store/apps/details?id=com.Beauchamp.Messenger.external&hl=id",
@@ -93,7 +110,7 @@ export const projects: Project[] = [
 				"https://apps.apple.com/id/app/chai-social-ai-platform-chat/id1544750895",
 		},
 		status: "Live",
-		type: "Mobile App",
+		type: ["Mobile App"],
 		featured: true,
 	},
 	{
@@ -109,14 +126,14 @@ export const projects: Project[] = [
 			"Brought the platform from concept to production in under 6 months, meeting all launch milestones",
 			"Grew the product to 3K+ daily active users following the initial launch",
 		],
-		tags: ["Flutter", "Startup", "YC W22", "MVP", "HR Tech"],
+		tags: ["Flutter", "Startup", "YC W22", "MVP", "HR Tech", "Android", "iOS"],
 		links: {
 			googlePlay:
 				"https://play.google.com/store/apps/details?id=com.stafbook.employee",
 			appStore: "https://apps.apple.com/id/app/stafbook-karyawan/id6444427879",
 		},
 		status: "Live",
-		type: "Mobile App",
+		type: ["Mobile App"],
 		metrics: [
 			{ label: "DAU", value: "3K+" },
 			{ label: "Backed by", value: "YC W22" },
@@ -142,8 +159,44 @@ export const projects: Project[] = [
 				"https://github.com/pulls?q=is%3Apr+author%3Ajohansutrisno+org%3AAppFlowy-IO",
 		},
 		status: "Open Source",
-		type: "Open Source",
+		type: ["Open Source"],
 		metrics: [{ label: "GitHub Stars", value: "68K+" }],
+		featured: true,
+	},
+	{
+		title: "YouBeauty",
+		slug: "youbeauty",
+		role: "Fullstack Engineer",
+		company: "YouBeauty",
+		period: "2024–Present",
+		description:
+			"Delivered fullstack features across mobile and web for YouBeauty, an Australian beauty services marketplace connecting customers with independent beauty artists. Focused on improving booking workflows, analytics capabilities, and the end-to-end experience for both artists and customers.",
+		highlights: [
+			"Built a Booking Link mechanism enabling artists to invite existing and new customers to confirm bookings via a shared link, simplifying the confirmation process end-to-end",
+			"Implemented the Additional Notes feature, allowing artists to include personalised instructions within bookings and improving communication clarity",
+			"Integrated event tracking across mobile and web (Amplitude, Segment) to support product analytics and enable data-driven decisions by the product team",
+		],
+		tags: [
+			"React Native",
+			"React",
+			"Django",
+			"TypeScript",
+			"Firebase",
+			"AWS",
+			"Fullstack",
+		],
+		links: {
+			website: "https://youbeauty.app/",
+			googlePlay:
+				"https://play.google.com/store/apps/details?id=au.com.youbeauty.next",
+			appStore: "https://apps.apple.com/au/app/youbeauty/id6737531032",
+		},
+		status: "Live",
+		type: ["Mobile App", "Web App"],
+		metrics: [
+			{ label: "Platform", value: "Mobile & Web" },
+			{ label: "Market", value: "Australia" },
+		],
 		featured: true,
 	},
 ];

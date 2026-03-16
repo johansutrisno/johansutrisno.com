@@ -36,8 +36,12 @@ export default function Home() {
 
 							<h2 className="text-2xl md:text-3xl font-medium text-muted mb-8 max-w-2xl leading-relaxed">
 								<span className="text-foreground">Senior Product Engineer</span>{" "}
-								based in Jakarta. I build Flutter apps that people actually use
-								— <span className="text-accent-light">20K+ daily</span>.
+								based in Jakarta. I build high-quality products across web and
+								mobile —{" "}
+								<span className="text-accent-light">
+									Backed by 6+ years in production from architecture to shipping
+								</span>
+								.
 							</h2>
 
 							<div className="flex flex-wrap gap-4 mb-12">
@@ -110,10 +114,11 @@ export default function Home() {
 
 									<div>
 										<p className="text-sm font-mono text-accent-light mb-2">
-											class SeniorEngineer {"{"}
+											class ProductEngineer {"{"}
 										</p>
 										<p className="pl-4 text-sm font-mono text-muted mb-1">
-											expertise: ["Flutter", "AI"];
+											expertise: ["Flutter", "React", "Django", "Dart",
+											"Typescript", "Python"];
 										</p>
 										<p className="pl-4 text-sm font-mono text-muted mb-1">
 											mindset: "Product-driven";
@@ -148,7 +153,7 @@ export default function Home() {
 							>
 								<div className="w-2 h-2 rounded-full bg-[#00D2FF]" />
 								<span className="text-xs font-bold font-mono">
-									Flutter Expert
+									Product Minded
 								</span>
 							</motion.div>
 

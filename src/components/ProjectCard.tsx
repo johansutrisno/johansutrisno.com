@@ -72,7 +72,6 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
-  const typeInfo = project.type ? typeConfig[project.type] : null;
   const isOpenSource = project.status === "Open Source";
 
   return (
@@ -102,15 +101,22 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           }`}
         />
 
-        {/* Type icon */}
-        {typeInfo && (
-          <div
-            className={`relative z-10 flex items-center gap-2 px-3 py-1.5 rounded-xl ${typeInfo.bg} ${typeInfo.colour} font-semibold text-xs`}
-          >
-            {typeInfo.icon}
-            <span>{project.type}</span>
-          </div>
-        )}
+        {/* Type badges */}
+        <div className="relative z-10 flex flex-wrap gap-2">
+          {project.type?.map((t) => {
+            const typeInfo = typeConfig[t];
+            if (!typeInfo) return null;
+            return (
+              <div
+                key={t}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-xl ${typeInfo.bg} ${typeInfo.colour} font-semibold text-xs`}
+              >
+                {typeInfo.icon}
+                <span>{t}</span>
+              </div>
+            );
+          })}
+        </div>
 
         {/* Metrics */}
         {project.metrics && project.metrics.length > 0 && (
