@@ -16,7 +16,7 @@ export default function Work() {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Work Experience<span className="text-accent">.</span></h1>
         <p className="text-muted text-lg mb-16 max-w-2xl">
-          My professional journey has been focused on building scalable mobile products, starting from Android development to leading complex Flutter migrations.
+          My professional journey building products across the full stack — from engineering scalable systems to leading cross-functional product teams.
         </p>
 
         <div className="relative space-y-12">

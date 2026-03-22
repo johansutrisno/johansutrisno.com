@@ -48,7 +48,7 @@ export default function Uses() {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Uses<span className="text-accent">.</span></h1>
         <p className="text-muted text-lg mb-16 max-w-2xl">
-          A semi-comprehensive list of the tools, technologies, and hardware I use to build mobile products every day.
+          A semi-comprehensive list of the tools, technologies, and hardware I use to ship great products every day.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -81,7 +81,7 @@ export default function Uses() {
            <div className="max-w-md">
               <h3 className="text-lg font-bold mb-2">Why this stack?</h3>
               <p className="text-muted text-sm leading-relaxed">
-                I'm a firm believer in using the right tool for the job. While I specialize in Flutter, I keep my skills broad across the full stack to ensure I can see the "big picture" of a product.
+                I'm a firm believer in using the right tool for the job. I keep my skills broad across the full stack to see the "big picture" of a product, from the first line of code to the experience in users' hands.
               </p>
            </div>
            <div className="p-6 bg-accent-dim rounded-2xl border border-accent/10">

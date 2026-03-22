@@ -36,8 +36,7 @@ export default function Home() {
 
 							<h2 className="text-2xl md:text-3xl font-medium text-muted mb-8 max-w-2xl leading-relaxed">
 								<span className="text-foreground">Senior Product Engineer</span>{" "}
-								based in Jakarta. I build high-quality products across web and
-								mobile —{" "}
+								based in Jakarta. I turn ideas into high-quality products —{" "}
 								<span className="text-accent-light">
 									Backed by 6+ years in production from architecture to shipping
 								</span>

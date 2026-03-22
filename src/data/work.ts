@@ -37,7 +37,7 @@ export const workExperiences: WorkExperience[] = [
     period: "Jun 2019 – Mar 2022",
     highlights: [
       "Implemented full Flutter architecture for enterprise clients",
-      "Mentored junior engineers in mobile development",
+      "Mentored junior engineers in product development",
     ],
     techStack: ["Flutter", "Dart", "BLoC", "Kotlin", "Swift"],
   },

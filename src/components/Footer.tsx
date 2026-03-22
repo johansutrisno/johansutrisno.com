@@ -8,7 +8,7 @@ export const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-2">Johan Sutrisno</h3>
           <p className="text-muted text-sm max-w-xs">
-            Senior Product Engineer building premium mobile experiences with Flutter.
+            Senior Product Engineer crafting end-to-end products from idea to impact.
           </p>
         </div>
         

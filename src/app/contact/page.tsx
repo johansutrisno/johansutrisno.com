@@ -14,7 +14,7 @@ export default function Contact() {
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch<span className="text-accent">.</span></h1>
         <p className="text-muted text-lg mb-16 max-w-2xl">
-          Interested in collaborating, seeking advice on Flutter architecture, or just want to say hi? I'd love to hear from you.
+          Interested in collaborating, discussing technical strategies, or just want to say hi? I'd love to hear from you.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

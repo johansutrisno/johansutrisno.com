@@ -40,13 +40,12 @@ export default function About() {
 				<div className="prose prose-invert mb-16">
 					<p className="text-xl text-foreground leading-relaxed font-medium mb-6">
 						I'm a Senior Product Engineer with over 6 years of experience
-						building mobile and web experiences that matter.
+						building end-to-end digital products that matter.
 					</p>
 					<p className="text-muted leading-relaxed mb-6">
 						Currently at{" "}
 						<span className="text-foreground font-medium">Zero One Group</span>,
-						I spend most of my time architecting and leading mobile product
-						development. I've been fortunate enough to lead the migration of
+						I architect and lead product development across the full delivery cycle. I've been fortunate enough to lead the migration of
 						platforms like
 						<span className="text-foreground font-medium"> KickAvenue</span>{" "}
 						from React Native to Flutter, serving tens of thousands of users
@@ -56,8 +55,8 @@ export default function About() {
 						My journey includes being part of the{" "}
 						<span className="text-foreground font-medium">YC W22</span> cohort
 						with StafBook, where I learned the speed and rigor required for
-						world-class startups. I'm also deeply committed to the Flutter
-						ecosystem, regularly contributing to open source projects like{" "}
+						world-class startups. I'm deeply committed to open source and
+						regularly contribute to projects like{" "}
 						<span className="text-accent-light font-medium">AppFlowy</span>.
 					</p>
 				</div>

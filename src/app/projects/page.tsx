@@ -18,7 +18,7 @@ export default function Projects() {
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects<span className="text-accent">.</span></h1>
             <p className="text-muted text-lg max-w-xl">
-              A curated selection of my work, ranging from large-scale mobile migrations to open source contributions.
+              A curated selection of my work, from large-scale platform migrations to open source contributions and full-stack products.
             </p>
           </div>
           <div className="flex gap-4">
