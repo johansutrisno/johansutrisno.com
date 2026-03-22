@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Terminal, Code2, Cpu, Wrench, Database, Monitor } from 'lucide-react';
 import { Badge } from '@/components/Badge';
@@ -86,7 +85,7 @@ export default function Uses() {
            </div>
            <div className="p-6 bg-accent-dim rounded-2xl border border-accent/10">
               <p className="text-xs font-mono text-accent-light">
-                // Last updated: March 2024
+                // Last updated: March 2026
               </p>
            </div>
         </div>

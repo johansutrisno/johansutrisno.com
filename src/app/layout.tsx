@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Johan Sutrisno — Senior Product Engineer",
   description: "Senior Product Engineer with 6+ years building high-quality digital products across web and mobile. Led KickAvenue migration, contributed to AppFlowy. Based in Jakarta.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "Johan Sutrisno — Senior Product Engineer",
     description: "Senior Product Engineer with 6+ years building high-quality digital products across web and mobile. Led KickAvenue migration, contributed to AppFlowy. Based in Jakarta.",

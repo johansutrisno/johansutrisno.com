@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import { FileText, Heart, Zap, Shield, Sparkles } from "lucide-react";
 
