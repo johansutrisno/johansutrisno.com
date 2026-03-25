@@ -95,22 +95,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var savedTheme = localStorage.getItem('theme');
-                  if (savedTheme === 'light') {
-                    document.documentElement.classList.remove('dark');
-                  } else {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
+        <script id="theme-initializer">
+          {`
+            (function() {
+              try {
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                  document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch (e) {}
+            })();
+          `}
+        </script>
         <PersonSchema />
         <WebSiteSchema />
       </head>

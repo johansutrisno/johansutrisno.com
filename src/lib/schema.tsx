@@ -1,4 +1,4 @@
-import { Project } from "@/data/projects";
+import type { Project } from "@/data/projects";
 
 /**
  * Common Schema Props
@@ -50,10 +50,9 @@ export const PersonSchema = () => {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
   );
 };
 
@@ -71,10 +70,9 @@ export const WebSiteSchema = () => {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
   );
 };
 
@@ -88,10 +86,9 @@ export const ProfilePageSchema = () => {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
   );
 };
 
@@ -113,10 +110,9 @@ export const BreadcrumbSchema = ({ items }: { items: BreadcrumbItem[] }) => {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
   );
 };
 
@@ -141,9 +137,8 @@ export const ItemListSchema = ({ projects }: { projects: Project[] }) => {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
   );
 };
