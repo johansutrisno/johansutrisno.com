@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 const navLinks = [
   { name: 'About', href: '/about' },
@@ -62,16 +63,21 @@ export const Nav = () => {
             <a href="https://linkedin.com/in/johansutrisno" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground">
               <Linkedin size={18} />
             </a>
+            <ThemeToggle />
           </div>
         </div>
 
         {/* Mobile Nav Toggle */}
-        <button 
-          className="md:hidden text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button 
+            type="button"
+            className="text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav Menu */}

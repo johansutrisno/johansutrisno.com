@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { PersonSchema, WebSiteSchema } from "@/lib/schema";
 import { WebVitals } from "@/components/WebVitals";
 
@@ -92,20 +93,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem('theme');
+                  if (savedTheme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                  } else {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
         <PersonSchema />
         <WebSiteSchema />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-accent/30 selection:text-white`}
       >
-        <WebVitals />
-        <Nav />
-        <main className="min-h-screen pt-20">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <WebVitals />
+          <Nav />
+          <main className="min-h-screen pt-20">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
