@@ -1,23 +1,6 @@
 {
   "hosting": [
     {
-      "site": "johansutrisno",
-      "public": "out",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "cleanUrls": true,
-      "redirects": [
-        {
-          "source": "/**",
-          "destination": "https://johansutrisno.com/:splat",
-          "type": 301
-        }
-      ]
-    },
-    {
       "site": "johansutrisno-31e33",
       "public": "out",
       "ignore": [
